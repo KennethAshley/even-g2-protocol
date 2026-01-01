@@ -42,6 +42,9 @@ Thumbs.db
 *.log
 *.btsnoop
 
+# Exception: Allow sanitized captures
+!captures/*.log
+
 # Local testing
 test_*.py
 scratch/
