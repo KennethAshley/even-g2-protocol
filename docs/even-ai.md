@@ -355,7 +355,7 @@ These allow AI to control other G2 features:
 
 **Status**: Skill packets not yet captured in testing.
 
----
+
 
 ## Testing
 
@@ -369,34 +369,6 @@ These allow AI to control other G2 features:
 - **Timing**: ~500ms between updates
 - **Result**: ✅ Smooth query refinement
 
----
-
-## Comparison to Conversate
-
-| Feature | Even AI | Conversate |
-|---------|---------|------------|
-| Service ID | 0x07 | 0x0B |
-| Trigger | "Hey Even" | Manual start |
-| Purpose | Q&A assistant | Transcription |
-| Response | AI-generated | Echo text |
-| Direction | Bidirectional | Mostly →Glasses |
-| Network | Required | Required |
-
-**Key difference**: Even AI is **interactive** (query/response), Conversate is **passive** (transcription only).
-
----
-
-## Integration
-
-Even AI and Conversate can run **simultaneously**:
-1. Conversate active → transcribing speech
-2. User says "Hey Even" → Even AI activates
-3. AI query/response → displayed on glasses
-4. Return to Conversate mode
-
-Both use separate service IDs (0x07 vs 0x0B).
-
----
 
 ## Future Work
 
@@ -415,19 +387,15 @@ With this protocol, possible to:
 - ✅ Use custom AI models (GPT, Claude, etc.)
 - ✅ Build Even AI alternatives
 
----
 
 ## Credits
 
-- **Protocol Discovery**: Tyler (soxi) - January 2, 2026
-- **Protobuf Definitions**: aegray (community)
-- **Service ID Architecture**: aegray clarification
-- **Test Captures**: Android BTSnoop logs
+- **Protocol Discovery**: Soxi - January 2, 2026
+- **Protobuf Definitions**: aegray (that parser is sweet!)
 
 ---
 
 ## See Also
 
-- [Conversate Protocol](conversate.md) - Speech transcription
 - [Service IDs](services.md) - Complete service listing
 - [Packet Structure](packet-structure.md) - Transport layer format
