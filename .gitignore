@@ -45,6 +45,13 @@ Thumbs.db
 # Exception: Allow sanitized captures
 !captures/*.log
 
+# APK/XAPK files
+*.xapk
+*.apk
+
+# Claude memory files
+CLAUDE.md
+
 # Local testing
 test_*.py
 scratch/

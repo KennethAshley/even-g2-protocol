@@ -16,23 +16,33 @@ The G2 glasses use a custom protocol created by EvenRealities. This BLE (bluetoo
 | Authentication | Working | 7-packet handshake sequence |
 | Teleprompter | Working | Custom text display confirmed |
 | Calendar Widget | Working | Display events on glasses |
-| Notifications | Partial | Metadata only (app + count) |
-| Even AI | Research | Protocol identified |
+| Notifications | Cracked! | Text display via Conversate service |
+| Even AI | Cracked! | Transcription display protocol decoded |
 | Navigation | Research | High display traffic observed |
 
 ## Quick Start
 
 ```bash
+cd examples/notify
+pip install -r requirements.txt
+
+# Send a notification to your glasses
+python notify.py "Hello from Python!"
+
+# With a title
+python notify.py "Meeting in 5 minutes" --title "Calendar"
+
+# Alternative: use teleprompter display (scrollable text)
+python notify.py "Hello from Python!" --method teleprompter
+```
+
+### Teleprompter
+
+```bash
 cd examples/teleprompter
 pip install -r requirements.txt
 
-# Display custom text on glasses
 python teleprompter.py "Hello from Python!"
-
-# Multi-line text
-python teleprompter.py "Line one
-Line two
-Line three"
 ```
 
 ## Documentation
